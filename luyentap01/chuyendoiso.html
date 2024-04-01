@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyendoiso</title>
+</head>
+<body>
+<h2>nhập ngôi sao cần tìm</h2>
+<label><input id="start" type="text"></label>
+<button onclick="check()">check</button>
+<p id="result"></p>
+<script>
+  const arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+  const arr2 = ["UrsaMinor", "Taurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    function check()
+    {
+      let s=document.getElementById("start").value;
+      let result;
+
+for(let i=0;i<arr1.length;i++)
+{
+  if(s===arr1[i])
+  {
+    result=arr2[i];
+    break;
+  }
+
+}
+      document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
